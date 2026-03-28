@@ -3,15 +3,12 @@
  * @return {number}
  */
 var jump = function(nums) {
-    let jump=0;
-    let fastest=0;
-    let currEnd=0;
+    let jump=0,currEnd=0,fast=0;
     for(let i=0;i<nums.length-1;i++){
-        fastest=Math.max(fastest,i+nums[i]);
-
+        fast=Math.max(fast,i+nums[i]);
         if(i===currEnd){
-            jump++;
-            currEnd=fastest;
+        jump++;
+        currEnd = fast
         }
     }
     return jump
