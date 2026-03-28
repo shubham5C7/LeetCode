@@ -3,12 +3,12 @@
  * @return {boolean}
  */
 var canJump = function(nums) {
-    let idx=0,n=nums.length;
-    for(let i=0;i<n;i++){
-        if(i>idx){
+    let jump=0;
+    for(let i=0;i<nums.length;i++){
+        if(i>jump){
             return false;
         }
-        idx = Math.max(idx,i+nums[i])
+            jump=Math.max(jump,i+nums[i])
     }
-    return true
+    return  true
 };
