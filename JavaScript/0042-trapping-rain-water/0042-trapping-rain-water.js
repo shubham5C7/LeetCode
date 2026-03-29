@@ -8,7 +8,7 @@ var trap = function(height) {
     while(left<right){
         if(height[left] < height[right]){
             if(height[left] >= leftMax){
-                leftMax=height[left]
+             leftMax=height[left];
             }else{
                 water+=leftMax-height[left]
             }
@@ -19,7 +19,7 @@ var trap = function(height) {
             }else{
                 water+=rightMax-height[right]
             }
-            right--;
+            right--
         }
     }
     return water
