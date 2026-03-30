@@ -5,12 +5,12 @@
 var trap = function(height) {
     let leftMax=0,rightMax=0,water=0;
     let left=0,right=height.length-1;
-    while(left<right){
+    while(left < right){
         if(height[left] < height[right]){
             if(height[left] >= leftMax){
-             leftMax=height[left];
+                leftMax=height[left] 
             }else{
-                water+=leftMax-height[left]
+                water+=leftMax-height[left];
             }
             left++
         }else{
