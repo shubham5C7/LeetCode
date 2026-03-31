@@ -5,13 +5,15 @@
  */
 var searchRange = function(nums, target) {
     let n=nums.length;
-    let firstIdx=-1;
-    let lastIdx=-1;
+    let first=-1;
+    let last=-1;
     for(let i=0;i<n;i++){
-  if(nums[i]===target){
-    if(firstIdx ===-1) firstIdx=i
-    lastIdx=i
-  }
+    if(nums[i] ===target){
+        if(first === -1){
+            first=i;
+        }
+            last=i;
     }
-   return [firstIdx,lastIdx]
+    }
+    return [first,last];
 };
