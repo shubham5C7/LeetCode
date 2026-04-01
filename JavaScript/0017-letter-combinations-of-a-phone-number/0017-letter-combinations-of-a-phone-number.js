@@ -3,7 +3,7 @@
  * @return {string[]}
  */
 var letterCombinations = function(digits) {
-    if(digits.length === 0) return;
+if(digits.length === 0) return;
     let map ={
     '2':"abc",
     '3':"def",
@@ -17,16 +17,15 @@ var letterCombinations = function(digits) {
 let res=[];
 
 function backtracking(idx,path){
-if(idx === digits.length){
+if(digits.length === path.length){
     res.push(path);
     return;
 }
-
-let letters = map[digits[idx]];
+let letters=map[digits[idx]];
 for(let ch of letters){
     backtracking(idx+1,path+ch)
 }
 }
-backtracking(0,"");
+backtracking(0,"")
 return res;
 };
