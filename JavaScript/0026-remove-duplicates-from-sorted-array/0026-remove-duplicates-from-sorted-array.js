@@ -7,8 +7,8 @@ var removeDuplicates = function(nums) {
     for(let right=0;right<nums.length;right++){
         if(nums[right] !== nums[left]){
             left++;
-            nums[left] = nums[right];
+            nums[left] = nums[right]
         }
     }
-    return left+1
+    return left+1;
 };
