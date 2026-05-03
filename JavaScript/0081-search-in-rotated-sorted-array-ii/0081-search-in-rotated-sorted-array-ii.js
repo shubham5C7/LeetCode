@@ -11,12 +11,9 @@ var search = function(nums, target) {
 
         if(nums[mid] === target) return true;
 
-           if (nums[left] === nums[mid] && nums[mid] === nums[right]) {
-            left++;
+   if (nums[mid] === nums[right]) {
             right--;
-            continue;
         }
-
         if(nums[left] <= nums[mid]){
             if(nums[left] <= target && target < nums[mid]){
                 right = mid-1
