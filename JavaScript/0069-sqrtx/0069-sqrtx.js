@@ -3,11 +3,18 @@
  * @return {number}
  */
 var mySqrt = function(x) {
-    if(x<2) return x;
-    let ans = 2*Math.floor(Math.sqrt(Math.floor(x/4)));
-    ans++;
-    if(ans*ans > x){
-        return ans-1;
+    let left = 0,right = x;
+    let ans = -1;
+    while(left <= right){
+        let mid = Math.floor((left+right)/2);
+        if(mid * mid === x) return mid;
+
+        if(mid * mid < x){
+            ans = mid;
+            left = mid +1 ;
+        }else{
+            right = mid -1;
+        }
     }
-    return ans
+    return ans;
 };
