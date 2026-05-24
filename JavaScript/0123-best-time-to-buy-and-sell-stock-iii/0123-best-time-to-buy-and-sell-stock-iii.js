@@ -5,6 +5,7 @@
 var maxProfit = function(prices) {
     let buy1=-Infinity,sell1=0;
     let buy2=-Infinity,sell2=0;
+
     for(let price of prices){
         buy1=Math.max(buy1,-price);
         sell1=Math.max(sell1,buy1+price);
