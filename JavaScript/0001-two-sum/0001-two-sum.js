@@ -4,14 +4,14 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let mpp= {};
+    let mpp= new Map;
 
     for(let i=0;i<nums.length;i++){
         let third = target - nums[i];
-        if(third in mpp){
-            return [mpp[third],i];
+        if(mpp.has(third)){
+            return [mpp.get(third),i];
         }
-        mpp[nums[i]] = i;
+        mpp.set(nums[i],i)
     }
     return nums
 };
