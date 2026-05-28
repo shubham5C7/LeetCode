@@ -10,8 +10,8 @@ var maximalSquare = function(matrix) {
             if(i>0 && j>0){
                 matrix[i][j] = Math.min(matrix[i-1][j],matrix[i][j-1],matrix[i-1][j-1])+1
             }
-            maxi = Math.max(maxi,matrix[i][j])
+            maxi =Math.max(maxi,matrix[i][j])
         }
     }
-    return maxi**2
+    return maxi**2;
 };
