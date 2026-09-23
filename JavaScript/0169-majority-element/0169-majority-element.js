@@ -3,17 +3,17 @@
  * @return {number}
  */
 var majorityElement = function(nums) {
-    let cnt=0;
-    let maj = 0;
+    let map = new Map()
+
     for(let num of nums){
-     if(cnt === 0){
-        maj=num
-        cnt=1;
-     }else if(maj === num){
-        cnt++
-     }else{
-        cnt--
-     }
+        map.set(num,(map.get(num)||0)+1)
     }
-    return maj
+    let maxi = 0,maxiKey=0
+    for(let [key,val] of map){
+    if(maxi < val){
+        maxi = val
+        maxiKey = key
+    }
+    }
+    return maxiKey
 };
