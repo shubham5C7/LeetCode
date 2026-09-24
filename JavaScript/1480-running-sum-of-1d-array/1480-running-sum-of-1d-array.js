@@ -3,11 +3,14 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
-    let prefix=[]
-    prefix[0] = nums[0];
 
-    for(let i=1;i<nums.length;i++){
-        prefix[i] = prefix[i-1]+nums[i]
-    }
-    return prefix
+ function sumOfDigits(left,right,sum,res){
+  if(left> right){
+    return res
+  }
+  sum+=nums[left]
+  res.push(sum)
+ return sumOfDigits(left+1,right,sum,res)
+ }
+ return sumOfDigits(0,nums.length-1,0,[])
 };
