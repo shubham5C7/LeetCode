@@ -14,5 +14,9 @@ let map = new Map()
 map.get(str).push(num)
 
  }
- return Array.from(map.values())
+ let res = []
+for(let val of map.values()){
+ res.push(val)
+}
+  return res
 };
