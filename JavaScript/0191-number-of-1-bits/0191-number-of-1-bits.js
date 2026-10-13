@@ -3,7 +3,6 @@
  * @return {number}
  */
 var hammingWeight = function(n) {
-  const countones = n => n===0 ? 0 : (n&1)+countones(n>>>1)
-  return countones(n);
-
+ const countone = n=> n===0 ? 0 : (n& 1)+countone(n>>>1)
+  return countone(n)
 };
